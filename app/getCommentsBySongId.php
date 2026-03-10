@@ -4,17 +4,17 @@
 
     if(isset($_GET['id'])){
         $request = $pdo->prepare('
-            SELECT cover_url
-            FROM albums
-            WHERE id = ?
+            SELECT * FROM comments
+            WHERE song_id = ?
+            ORDER BY created_at DESC
         ');
         $request->execute([$_GET['id']]);
 
-        $cover = $request->fetch();
+        $comments = $request->fetchALL();
 
         header('Content-Type: application/json');
 
-        echo json_encode($cover);
-    }
+        echo json_encode($comments);
+    };
 
 ?>
