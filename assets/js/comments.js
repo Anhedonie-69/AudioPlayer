@@ -37,7 +37,6 @@ async function createComment(content, songId){
         };
 
         const result = await response.json();
-        console.log(result);
 
     } catch (error) {
         console.error("Error createComment :", error);

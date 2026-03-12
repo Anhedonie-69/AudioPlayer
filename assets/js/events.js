@@ -1,8 +1,11 @@
 const prev = document.getElementById("prev");
 const play = document.getElementById("play");
 const next = document.getElementById("next");
-const shuffe = document.getElementById("shuffle");
+const shuffle = document.getElementById("shuffle");
 const repeat = document.getElementById("repeat");
+
+const commentInput = document.getElementById("comment_input");
+const commentButton = document.getElementById("comment_button");
 
 prev.addEventListener("click", () => {
     previousSong();
@@ -22,4 +25,10 @@ shuffle.addEventListener("click", () => {
 
 repeat.addEventListener("click", () => {
     toggleRepeat();
+});
+
+commentButton.addEventListener("click", () => {
+    const text = commentInput.value;
+    if(!text) {return;};
+    addComment(text);
 });

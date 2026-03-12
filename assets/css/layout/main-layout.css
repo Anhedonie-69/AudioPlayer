@@ -1,0 +1,21 @@
+.mobile-tabs{
+    display:flex;
+    width:100%;
+}
+
+.mobile-tabs button{
+    flex:1;
+    position:sticky;
+    top:0;
+
+    width:100%;
+    padding:12px;
+
+    background:#111;
+    color:white;
+
+    font-weight:bold;
+    text-align:center;
+
+    z-index:10;
+}

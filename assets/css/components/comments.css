@@ -1,0 +1,5 @@
+#comments_container{
+    max-height:200px;
+    overflow-y:auto;
+    margin-top:15px;
+}

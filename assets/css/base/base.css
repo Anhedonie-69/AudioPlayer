@@ -1,0 +1,10 @@
+body{
+    background:var(--color-bg);
+    color:var(--color-text);
+}
+
+/*button{
+    cursor:pointer;
+    border:none;
+    background:none;
+}*/
