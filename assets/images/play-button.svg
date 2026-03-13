@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="play-button">
+  <circle cx="16" cy="16" r="15" fill="#eef5fd"></circle>
+  <circle cx="16" cy="16" r="15" fill="#eef5fd"></circle>
+  <path fill="#d7e2f2" d="M31,16A15,15,0,0,0,16,1V31A15,15,0,0,0,31,16Z"></path>
+  <path fill="#ff9797" d="M23.6,13.32,13.08,8.06a3,3,0,0,0-4.34,2.68V21.26a3,3,0,0,0,1.42,2.55,3,3,0,0,0,1.58.45,2.93,2.93,0,0,0,1.34-.32L23.6,18.68a3,3,0,0,0,0-5.36Z"></path>
+  <path fill="#e47979" d="M23.6,13.32,16,9.52v13l7.6-3.8a3,3,0,0,0,0-5.36Z"></path>
+</svg>

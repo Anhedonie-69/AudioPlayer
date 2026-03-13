@@ -7,6 +7,8 @@ const repeat = document.getElementById("repeat");
 const commentInput = document.getElementById("comment_input");
 const commentButton = document.getElementById("comment_button");
 
+const tablet = window.matchMedia("(min-width: 768px)");
+
 prev.addEventListener("click", () => {
     previousSong();
 });
@@ -27,8 +29,24 @@ repeat.addEventListener("click", () => {
     toggleRepeat();
 });
 
-commentButton.addEventListener("click", () => {
-    const text = commentInput.value;
-    if(!text) {return;};
+function submitComment() {
+    const text = commentInput.value.trim();
+    if (!text) return;
     addComment(text);
+}
+
+commentButton.addEventListener("click", submitComment);
+
+commentInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        submitComment();
+    }
+});
+
+tablet.addEventListener("change", (e)=> {
+    if (e.matches) {
+        console.log("matches");
+        albumListMobile.classList.remove("open");
+        songListMobile.classList.remove("open");
+    };
 });

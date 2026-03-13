@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="previous">
+  <circle cx="16" cy="16" r="15" fill="#eef5fd"></circle>
+  <circle cx="16" cy="16" r="15" fill="#eef5fd"></circle>
+  <path fill="#d7e2f2" d="M31,16A15,15,0,0,0,16,1V31A15,15,0,0,0,31,16Z"></path>
+  <path fill="#e49f4e" d="M23.48,10.13a1,1,0,0,0-1,0l-8,5a1,1,0,0,0,0,1.7l8,5A1,1,0,0,0,24,21V11A1,1,0,0,0,23.48,10.13Z"></path>
+  <path fill="#ffc661" d="M15.48,10.13a1,1,0,0,0-1,0l-8,5a1,1,0,0,0,0,1.7l8,5A1,1,0,0,0,16,21V11A1,1,0,0,0,15.48,10.13Z"></path>
+</svg>

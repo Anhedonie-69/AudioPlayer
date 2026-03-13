@@ -1,5 +1,16 @@
 #comments_container{
+    width: 80%;
     max-height:200px;
     overflow-y:auto;
-    margin-top:15px;
+}
+
+#comment_input {
+    margin-top: 10px;
+    width: 80%;
+    height: 60px;
+}
+
+#comment_button {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

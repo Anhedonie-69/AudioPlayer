@@ -19,11 +19,12 @@
         </div>
         <div id="album_list" class="list desktop"></div>
         <div class="player">
-            <img id="cover" width="200px">
+
+            <img src="assets\images\Home_Cover.png" alt="cover" id="cover">
 
             <div class="song-info">
-                <h2 id="songTitle"></h2>
-                <p id="albumName"></p>
+                <h2 id="songTitle">...</h2>
+                <p id="albumName">...</p>
             </div>
 
             <audio id="audioA"></audio>
@@ -45,7 +46,9 @@
                 </div>
             </div>
             <div class="volume_container">
-                <span id="volume_icon">🔊</span>
+                <div id="volume_icon">
+                    <img src="assets/images/volume-up.svg" alt="volume_icon">
+                </div>
                 <input
                     type="range"
                     id="volume_slider"
@@ -57,11 +60,21 @@
             </div>
 
             <div class="controls">
-                <button id="prev">⏮</button>
-                <button id="play">▶️</button>
-                <button id="next">⏭</button>
-                <button id="shuffle">🔀</button>
-                <button id="repeat">🔁</button>
+                <button id="prev">
+                    <img src="assets/images/previous.svg" alt="preview_button">
+                </button>
+                <button id="play">
+                    <img src="assets/images/play-button.svg" alt="play_button">
+                </button>
+                <button id="next">
+                    <img src="assets/images/next-arrow.svg" alt="next_button">
+                </button>
+                <button id="shuffle">
+                    <img src="assets/images/shuffle-arrow.svg" alt="shuffle_button">
+                </button>
+                <button id="repeat">
+                    <img src="assets/images/repeat.svg" alt="repeat_button">
+                </button>
             </div>
             <textarea 
                 id="comment_input" 

@@ -11,6 +11,7 @@ const progressBar = document.getElementById("progress_bar");
 const currentTimeDisplay = document.getElementById("current_time");
 const durationDisplay = document.getElementById("duration");
 const volumeIcon = document.getElementById("volume_icon");
+const volumeImg = volumeIcon.querySelector("img");
 const volumeSlider = document.getElementById("volume_slider");
 const commentContainer = document.getElementById("comments_container");
 let isShuffle = false;
@@ -39,7 +40,7 @@ async function createAlbumList(component){
     allAlbums.forEach(alb => {
         const b = document.createElement("button");
         b.type = "button";
-        b.classList.add("album-btn");
+        b.classList.add("album-btn", "list-btn");
         b.innerText = alb['title'];
         b.addEventListener("click", async () => {
             history = [];
@@ -59,7 +60,7 @@ function createSongList(component){
     songs.forEach(sg => {
         const b = document.createElement("button");
         b.type = "button";
-        b.classList.add("song-btn");
+        b.classList.add("song-btn", "list-btn");
         b.innerText = sg['title'];
         b.addEventListener("click", () => {
             if(isShuffle){
@@ -110,12 +111,13 @@ function loadSong(index){
 };
 
 function playSong(){
+    const playImg = play.querySelector("img");
     if(currentAudio.paused){
         currentAudio.play();
-        play.textContent = "⏸️";
+        playImg.src = "assets/images/stop.svg";
     }else{
         currentAudio.pause();
-        play.textContent = "▶️";
+        playImg.src = "assets/images/play-button.svg";
     };
 };
 
@@ -206,14 +208,14 @@ function updateActiveAlbum(){
 };
 
 function updateVolumeIcon(){
-    if(currentAudio.volume === 0){
-        volumeIcon.textContent = "🔇";
+    if(currentAudio.muted || currentAudio.volume === 0){
+        volumeImg.src = "assets/images/no-sound.svg";
     }
-    else if(audioA.volume < 0.5){
-        volumeIcon.textContent = "🔉";
+    else if(currentAudio.volume < 0.5){
+        volumeImg.src = "assets/images/sound.svg";
     }
     else{
-        volumeIcon.textContent = "🔊";
+        volumeImg.src = "assets/images/volume-up.svg";
     };
 };
 ////////////////// COMMENTS //////////////////
